@@ -20,5 +20,5 @@ result.json: ${LOCAL_SOURCES}
 	${YOSYS} -p "hierarchy -top riscv_core; proc; memory -nomap; wreduce -memx; opt -full" -o $@ ${LOCAL_SOURCES}
 
 clean:
-	rm *.vh config.sv
+	rm -f *.vh *.sv config.sv result.json
 
