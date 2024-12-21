@@ -20,5 +20,5 @@ result.json: ${LOCAL_SOURCES}
 	${YOSYS} -p "hierarchy; proc; memory -nomap; wreduce -memx; opt -full; write_verilog result.v" -o $@ ${LOCAL_SOURCES}
 
 clean:
-	rm *.vh config.sv
+	rm -f result.v *.vh config.sv
 
